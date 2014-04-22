@@ -3,6 +3,7 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
+		"install": "bower install", 
 		"start": "node-dev server/server.js"
 	},
 	"dependencies": {

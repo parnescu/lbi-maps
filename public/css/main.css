@@ -1,5 +1,6 @@
 html, body, h1,h2,h3,h4,h5,h6, div, span, p, a, ul, li { margin:0; padding:0;}
 html, body, section { width:100%; height:100%;}
+ul, li { list-style-type: none;}
 * { outline: none;}
 
 .mapHolder,
@@ -8,17 +9,33 @@ html, body, section { width:100%; height:100%;}
 #main header, 
 #main footer { position: absolute; z-index: 2; left: 6em; top: .5em; }
 #main footer { top:6.5em;}
-#main input[type="search"] { padding:.7em; padding-left:2.5em; font-size:1.4em; border-radius: .5em; border:.2em solid #ccc; width:80%; margin-top:3.4em;}
+#main input[type="search"] { padding:.7em; padding-left:2.5em; font-size:1.4em; border-radius: .5em; border:.2em solid #ccc; width:76%; margin-top:3.4em;}
 #main input.loaded { padding-left:.7em;}
 #main a { text-decoration: none; display:block;}
+#main button.action { display: none;}
 
 #main .mapHolder { z-index:1;}
-#main .clear { margin-left:1em; display: inline-block; color:#c354aa; color:#fff; background:rgba(0,0,0,.5); padding:.1em 1em; border-radius:.3em; font-size:.85em;}
+#main .clear { visibility: hidden; display: inline-block; color:#c354aa; color:#fff; background:rgba(0,0,0,.5); padding:.5em 1em; border-radius:.3em; font-size:.85em;}
 #main .preloader { position:absolute; left:-.1em; top:3.1em; visibility: hidden}
 
-#main .busDetails { visibility: hidden; position:absolute; z-index:3; background:rgba(255,255,255,.9); width:49%; height:50%; left:50%; top:1%; box-sizing: border-box; padding:1em; border-radius:.5em; }
-#main .busDetails h2 { float:left;}
+#main .busDetails { visibility: hidden; max-height:95%; overflow:scroll; overflow-x: none; position:absolute; z-index:3; background:rgba(255,255,255,.9); width:39%; height:auto; left:60%; top:1%; box-sizing: border-box; padding:1em; border-radius:.5em; }
+#main .busDetails .wrap { position:relative;}
+#main .busDetails h2 { float:left; margin-bottom:.7em; width:82%;}
 #main .busDetails .close { float:right;}
+#main .busDetails p { clear:both; float:none; display: block; overflow: hidden;}
+#main .busDetails p.lastUpdated,
+#main .busDetails p.routes { color:#999; font-size:.8em;} 
+#main .busDetails p.routes span { color:#9B1228;}
+#main .busDetails span { display:inline-block; padding:.3em; background:#ccc; margin-right:.2em; cursor: default;}
+#main .busDetails h2 { position:relative; z-index:2; padding:.5em 0 0 .5em;}
+#main .busDetails ul {margin:.5em;}
+#main .busDetails ul li { margin-bottom: .3em;}
+#main .busDetails ul span { background:none;}
+#main .busDetails ul a { font-size:.7em; color:#669CE2; font-weight: bold;}
+#main .busDetails ul a:hover:after { content:attr(title); background:rgba(0,0,0,.4); color:#fff; padding:.5em; margin-left:1em;}
+#main .busDetails .route { min-width:10%; text-align: center; background:#1090D8; color:#fff;}
+#main .busDetails .indicator { position: absolute; top: 0; left: 0; padding: .1em .4em; background: rgb(172, 16, 16); color: #fff; border-radius: .4em; z-index: 1;}
+
 
 
 @media (max-width: 600px) and (min-width:0px){

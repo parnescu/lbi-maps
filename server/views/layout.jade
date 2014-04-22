@@ -9,13 +9,18 @@ html
 	body
 		#main
 			header
-				h1 gmaps test
+				h1 LBi map test
 				img.preloader(src="res/loader.gif", alt="preloader")
 			section.busDetails
-				h2 Bus stop
-				p.lastUpdated
-				ul.arrivals
-				button.close close
+				.wrap
+					h2 Bus stop
+					button.close close
+					
+					p.indicator
+					p.lastUpdated
+					p.routes
+					hr
+					ul.arrivals
 			footer
 				button.action show bus stops
 				a.clear(href="#clearMarkers", title="Clear markers") clear
