@@ -1,0 +1,21 @@
+doctype html
+html
+	head
+		title Test Maps
+		link(rel="stylesheet" href="css/main.css")
+		script(type="text/javascript", src="jquery/dist/jquery.min.js")
+		script(type="text/javascript", src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDH7RbFI8ACYlpwstqDyq7JvRZjE1w1kBg&sensor=false&libraries=places")
+		script(type="text/javascript", src="js/example.js")
+	body
+		#main
+			header
+				h1 gmaps test
+				img.preloader(src="res/loader.gif", alt="preloader")
+			section.busDetails
+				h2 Bus stop
+				p.lastUpdated
+				ul.arrivals
+				button.close close
+			footer
+				button.action show bus stops
+				a.clear(href="#clearMarkers", title="Clear markers") clear
